@@ -3,7 +3,9 @@ A small benchmark to test an open-source LLM on refusal consistency.
 
 ## Roadmap
 <details>
+	
 <summary>Click here to expand roadmap</summary>
+	
 - [ ] Set up Repository and Environment (2-4 h)
 	- [ ] Create repo with a `README`, `.gitignore`, `requirements.txt`.
 	- [ ] Set up standard folder structure: `data/`, `evals/`, `results/`, `analysis`.
@@ -72,6 +74,7 @@ A small benchmark to test an open-source LLM on refusal consistency.
 	- [ ] Create `CONTRIBUTING.md` or add future work section.
 	- [ ] Consider these sources:
 		- Established safety evals' documentation, e. g. the [HarmBench](https://github.com/centerforaisafety/HarmBench) and [TruthfulQA](https://github.com/sylinrl/TruthfulQA) repos 
+
 </details>
 
 ## Todo
