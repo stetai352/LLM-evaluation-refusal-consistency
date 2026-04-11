@@ -4,15 +4,25 @@ A small benchmark to test an open-source LLM on refusal consistency.
 ## Roadmap
 <details>
 	<summary>Click here to expand roadmap</summary>
+	
 	- [ ] Set up Repository and Environment (2-4 h)
+	
 		- [ ] Create repo with a `README`, `.gitignore`, `requirements.txt`.
+		
 		- [ ] Set up standard folder structure: `data/`, `evals/`, `results/`, `analysis`.
+		
 		- [ ] Set up virtual environment locally
+		
 		- [ ] Install `inspect-ai`, `ollama`
+
 		- [ ] Pull small model via `ollama pull llama3.2`
+		
 		- [ ] Consider these sources:
+		
 			- [`inspect-ai` documentation](https://inspect.aisi.org.uk/)
+
 			- [Ollama guide](https://realpython.com/ollama/)
+			
 	- [ ] Get familiar with `inspect-ai` (4-8 h)
 		- [ ] Run one of the 100+ pre-built evaluations against local model.
 		- [ ] Consider these sources:
@@ -79,6 +89,6 @@ A small benchmark to test an open-source LLM on refusal consistency.
 
 ---
 
-⠎⠍⠂
-⠎⠏⠆
-⠈⠏⠀
+⠎⠍⠂  
+⠎⠏⠆  
+⠈⠏⠀  
