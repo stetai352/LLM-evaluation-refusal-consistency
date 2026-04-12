@@ -1,6 +1,6 @@
-## Setup
+# Setup
 
-### Project setup
+## Project setup
 Clone the repository from the CLI by running:
 
 ```
@@ -27,8 +27,10 @@ Install the necessary dependencies:
 pip install -r requirements.txt
 ```
 
+## gemini-2.5-pro setup
 
-### LLM setup
+
+## llama3.2 setup (obsolete)
 To install Ollama's Llama 3.2, install Ollama using the package manager of your choosing, then run
 ```
 ollama pull llama3.2:3b
