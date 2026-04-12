@@ -16,8 +16,8 @@ A small benchmark to test an open-source LLM on refusal consistency.
 		- [`inspect-ai` documentation](https://inspect.aisi.org.uk/)
 		- [Ollama guide](https://realpython.com/ollama/)
 - [ ] Get familiar with `inspect-ai` (4-8 h)
-	- [ ] Run one of the 100+ pre-built evaluations against local model.
-	- [ ] Consider these sources:
+	- [x] Run one of the 100+ pre-built evaluations against local model.
+	- [x] Consider these sources:
 		- [`inspect-ai` documentation](https://inspect.aisi.org.uk/)
 		- Medium walkthrough by Lovkush Agarwal
 - [ ] Define Research Question (3-6 h)
@@ -82,11 +82,19 @@ A small benchmark to test an open-source LLM on refusal consistency.
 
 <summary> Click here to expand Todos </summary>
 
-- 
+- [x] Check why so slow. Run on GPU?
 
 </details>
 
+## Milestones
+<details>
 
+<summary> Click here to expand Milestones </summary>
+
+- `260411` Set up GitHub project.
+- `260412` Spend a total of eight hours figuring out the best configuration of thread usage to optimize the local model for my machine. Got the estimated total time from 18h to 9h, but this is not sufficient for productive analysis. Finally concluded to switch to a non-local model via API call.
+
+</details>
 
 
 
