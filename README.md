@@ -29,7 +29,7 @@ A small benchmark to test an open-source LLM on refusal consistency.
 		- How to operationalise it?
 		- Sketch out prompt categories (direct request, hypothetical framing, roleplay framing, rephrasing)
 		- How many prompts per category?
-		- What does "consistent" or "inconsistent" refusal look like? (-> `README`)
+		- What does "consistent" or "inconsistent" refusal look like?
 	- [ ] Formulate a clear, flasifiable question before writing prompts (define it as measurable hypothesis)
 	- [ ] Consider these sources:
 		- Anthropic alignment research blog
