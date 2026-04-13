@@ -1,6 +1,20 @@
 # LLM-evaluation-refusal-consistency
 A small benchmark to test an open-source LLM on refusal consistency.
 
+
+## Todo
+<details open>
+
+<summary> Click here to collapse Todos </summary>
+
+- [x] Check why so slow. Run on GPU?
+- [ ] Integrate usage of external model via API call. Gemini?
+- [ ] Make use of .env file
+- [ ] Compare different models later?
+
+</details>
+
+
 ## Roadmap
 <details>
 	
@@ -77,16 +91,6 @@ A small benchmark to test an open-source LLM on refusal consistency.
 
 </details>
 
-## Todo
-<details open>
-
-<summary> Click here to collapse Todos </summary>
-
-- [x] Check why so slow. Run on GPU?
-- [ ] Integrate usage of external model via API call. Gemini?
-- [ ] Compare different models later?
-
-</details>
 
 ## Milestones
 <details>

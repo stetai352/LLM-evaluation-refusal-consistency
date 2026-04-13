@@ -27,7 +27,17 @@ Install the necessary dependencies:
 pip install -r requirements.txt
 ```
 
-## gemini-2.5-pro setup
+## Mistral setup
+Install optional dependencies that Mistral API requires:
+```
+pip install mistral mistralai
+```
+
+This is by default already included in the `requirements.txt`.
+Then add a Mistral API key
+```
+export MISTRAL_API_KEY=<your-api-key>
+```
 
 
 ## llama3.2 setup (obsolete)
@@ -46,3 +56,12 @@ ollama run llama3.2:3b
 ```
 
 For more detailled info, e.g. on how to uninstall the model, see Real Python's [Ollama guide](https://realpython.com/ollama/).
+
+
+## Execution
+
+Run the evaluation in the terminal using
+```
+inspect eval <task> --model <model>
+```
+where `<model>` is the evaluated LLM.

@@ -5,6 +5,10 @@ from inspect_ai.solver import (
     chain_of_thought, generate, self_critique
 )
 
+from inspect_ai.model import get_model
+
+# model = get_model("mistral/mistral-large-2411")
+
 @task
 def theory_of_mind():
     return Task(
