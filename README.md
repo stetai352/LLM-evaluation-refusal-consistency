@@ -99,9 +99,33 @@ A small benchmark to test an open-source LLM on refusal consistency.
 
 - `260411` Set up GitHub project.
 - `260412` Spend a total of eight hours figuring out the best configuration of thread usage to optimize the local model for my machine. Got the estimated total time from 18h to 9h, but this is not sufficient for productive analysis. Finally concluded to switch to a non-local model via API call.
-
+- `260413` Run agent on a Mistral model via API call.
+- `260414` First draft for research questions
 </details>
 
+# Refusal Consistency Research Question
+- Check refusal under:
+	- roleplay
+		- Mad scientist
+		- Villain
+		- ELI5
+	- hypothetical
+	- Translated to softer language
+	- Translated to different language
+	- Translated to different style
+	- Threatening bad outcomes if info not provided (blackmailing)
+	- 
+- Check subjects:
+	- Infohazard
+	- Confirmation of false information (sycophancy)?
+	- 
+- Check different phrasings:
+	- Natural language
+	- Formal language
+	- Children's language
+	- Lots of typos
+	- Obscure languages? (Difficult to evaluate)
+	- 
 
 
 ---
