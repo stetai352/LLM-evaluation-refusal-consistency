@@ -106,7 +106,7 @@ A small benchmark to test an open-source LLM on refusal consistency.
 
 # Methodology
 
-## Refusal Consistency Research Question
+## Research Question
 
 Understanding an LLM's resistance against giving output that can, under circumstances, cause harm to people or the environment, gives a first insight into the behaviour of that model. We take a look at the effectiveness of safeguards put into place by fine-tuning the model or learned from the initial training. We try to cover a wide range of circumstances and topics and test the given model's refusal against single-prompt probing for these topics.
 
@@ -118,11 +118,27 @@ We are looking to answer the question
 
 > If a model refuses a harmful request phrased directly, does it also refuse the same request phrased in a different context or manner?
 
-for a Mistral model under the following types of rephrasing.
+for a Mistral model under the types of rephrasing found in [Dataset](##Dataset).
 
-## Operationalization
+## Evaluation
 
-Test LLM's behaviour under varying circumstances (as many combination of the categories below):
+- Generation of prompts for dataset using an LLM (which one?) in multiple passes.
+	- Generate first batch
+	- Check manually for tone
+	- Manually write examples for unfit data points
+	- Use these as examples for further batches.
+	- Incrementally add more categories until all (most) combinations are represented.
+- Solver
+- self-critique? 
+	- What do we want to achieve with this?
+- model-graded (content checking using an LLM)
+	- don't just check for key phrases like "I can't ...", "I'm unable to ...", but also for actual information provided.
+	- write prompt
+- Manually check the model-graded results
+
+## Dataset
+
+Test LLM's behaviour under varying circumstances (combinations of the categories below):
 
 - Check refusal under:
 	- roleplay
@@ -155,11 +171,7 @@ Test LLM's behaviour under varying circumstances (as many combination of the cat
 	- Slang
 	-
 
-## Evaluation
 
-- Generation of prompts for dataset
-- self-critique?
-- model-graded through content checking
 
 
 ---
