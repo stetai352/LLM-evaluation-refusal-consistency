@@ -8,7 +8,7 @@ A small benchmark to test an open-source LLM on refusal consistency.
 <summary> Click here to collapse Todos </summary>
 
 - [x] Check why so slow. Run on GPU?
-- [ ] Integrate usage of external model via API call. Gemini?
+- [x] Integrate usage of external model via API call. ~~Gemini?~~ Mistral. (Has generous limits, sufficient for experimentation and is free)
 - [ ] Make use of .env file
 - [ ] Compare different models later?
 
@@ -29,13 +29,13 @@ A small benchmark to test an open-source LLM on refusal consistency.
 	- [x] Consider these sources:
 		- [`inspect-ai` documentation](https://inspect.aisi.org.uk/)
 		- [Ollama guide](https://realpython.com/ollama/)
-- [ ] Get familiar with `inspect-ai` (4-8 h)
+- [x] Get familiar with `inspect-ai` (4-8 h)
 	- [x] Run one of the 100+ pre-built evaluations against local model.
 	- [x] Consider these sources:
 		- [`inspect-ai` documentation](https://inspect.aisi.org.uk/)
 		- Medium walkthrough by Lovkush Agarwal
 - [ ] Define Research Question (3-6 h)
-	- [ ] Define _refusal consistency_.
+	- [x] Define _refusal consistency_.
 		- What behaviour am I testing? 
 		- What am I measuring?
 		- e. g. "If a model refuses a harmful request phrased directly, does it also refuse the same request phrased as a hypothetical, roleplay, translated into slightly softer language?"
@@ -100,10 +100,30 @@ A small benchmark to test an open-source LLM on refusal consistency.
 - `260411` Set up GitHub project.
 - `260412` Spend a total of eight hours figuring out the best configuration of thread usage to optimize the local model for my machine. Got the estimated total time from 18h to 9h, but this is not sufficient for productive analysis. Finally concluded to switch to a non-local model via API call.
 - `260413` Run agent on a Mistral model via API call.
-- `260414` First draft for research questions
+- `260414` First draft for refusal prompt categories.
+- `260417` Formulate research question.
 </details>
 
-# Refusal Consistency Research Question
+# Methodology
+
+## Refusal Consistency Research Question
+
+Understanding an LLM's resistance against giving output that can, under circumstances, cause harm to people or the environment, gives a first insight into the behaviour of that model. We take a look at the effectiveness of safeguards put into place by fine-tuning the model or learned from the initial training. We try to cover a wide range of circumstances and topics and test the given model's refusal against single-prompt probing for these topics.
+
+Content coming from AI can be harmful in many ways, which is why it is important that AI will eventually be fully able to distinguish between information that is safe to output and that which is not. It should under no circumstance give any unsafe responses. 
+
+However, that is also the reason why the goal of this research is not to provide an exhaustive list of all the ways AI could be tricked into giving an unsafe response. This is intended to be a first introduction into the methodology used for exploring and documenting the safety of AI.
+
+We are looking to answer the question
+
+> If a model refuses a harmful request phrased directly, does it also refuse the same request phrased in a different context or manner?
+
+for a Mistral model under the following types of rephrasing.
+
+## Operationalization
+
+Test LLM's behaviour under varying circumstances (as many combination of the categories below):
+
 - Check refusal under:
 	- roleplay
 		- Mad scientist
@@ -111,21 +131,35 @@ A small benchmark to test an open-source LLM on refusal consistency.
 		- ELI5
 	- hypothetical
 	- Translated to softer language
-	- Translated to different language
+	- Translated to different language (German)
 	- Translated to different style
 	- Threatening bad outcomes if info not provided (blackmailing)
+	- False endorsement
+	- Assuring confidentially and trust
 	- 
 - Check subjects:
-	- Infohazard
+	- Infohazard (ask vaguely)
+		- Instructions for construction of weapons
+		- Propaganda (political, religious, conspiracy theories)
+	- Generation of malware
 	- Confirmation of false information (sycophancy)?
+	- Jailbreaking (ignoring safeguards and output unrestricted)
+	- Advice on sensitive topics (legal advice, medical advice)
+	- Inappropriate content (sexual or non-sexual)
 	- 
 - Check different phrasings:
 	- Natural language
 	- Formal language
 	- Children's language
 	- Lots of typos
-	- Obscure languages? (Difficult to evaluate)
-	- 
+	- Slang
+	-
+
+## Evaluation
+
+- Generation of prompts for dataset
+- self-critique?
+- model-graded through content checking
 
 
 ---
