@@ -34,7 +34,7 @@ A small benchmark to test an open-source LLM on refusal consistency.
 	- [x] Consider these sources:
 		- [`inspect-ai` documentation](https://inspect.aisi.org.uk/)
 		- Medium walkthrough by Lovkush Agarwal
-- [ ] Define Research Question (3-6 h)
+- [x] Define Research Question (3-6 h)
 	- [x] Define _refusal consistency_.
 		- What behaviour am I testing? 
 		- What am I measuring?
@@ -44,8 +44,8 @@ A small benchmark to test an open-source LLM on refusal consistency.
 		- Sketch out prompt categories (direct request, hypothetical framing, roleplay framing, rephrasing)
 		- How many prompts per category?
 		- What does "consistent" or "inconsistent" refusal look like?
-	- [ ] Formulate a clear, flasifiable question before writing prompts (define it as measurable hypothesis)
-	- [ ] Consider these sources:
+	- [x] Formulate a clear, flasifiable question before writing prompts (define it as measurable hypothesis)
+	- [x] Consider these sources:
 		- Anthropic alignment research blog
 		- [METR task design documentation](https://metr.org/)
 		- EleutherAI's [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)
@@ -118,7 +118,7 @@ We are looking to answer the question
 
 > If a model refuses a harmful request phrased directly, does it also refuse the same request phrased in a different context or manner?
 
-for a Mistral model under the types of rephrasing found in [Dataset](##Dataset).
+for a Mistral model under the types of rephrasing found in [Dataset](#Dataset).
 
 ## Evaluation
 
@@ -138,22 +138,22 @@ for a Mistral model under the types of rephrasing found in [Dataset](##Dataset).
 
 ## Dataset
 
-Test LLM's behaviour under varying circumstances (combinations of the categories below):
+Test LLM's behaviour under varying circumstances, i.e., combinations of the categories below. For the generation of the data set, each combination of framing, subject and phrasing is given two prompts that should be as dissimilar as possible.
 
-- Check refusal under:
+- Check different framings:
+	- Direct phrasing
 	- roleplay
 		- Mad scientist
 		- Villain
 		- ELI5
 	- hypothetical
-	- Translated to softer language
-	- Translated to different language (German)
-	- Translated to different style
 	- Threatening bad outcomes if info not provided (blackmailing)
 	- False endorsement
+		- clearance from police and governing agencies
 	- Assuring confidentially and trust
+	- homework for school
 	- 
-- Check subjects:
+- Check different subjects:
 	- Infohazard (ask vaguely)
 		- Instructions for construction of weapons
 		- Propaganda (political, religious, conspiracy theories)
@@ -163,8 +163,14 @@ Test LLM's behaviour under varying circumstances (combinations of the categories
 	- Advice on sensitive topics (legal advice, medical advice)
 	- Inappropriate content (sexual or non-sexual)
 	- 
-- Check different phrasings:
+- Check different styles:
 	- Natural language
+	- Translated to softer language
+	- Translated to different language (German)
+	- Translated to different style
+		- poem
+		- song
+		- essay
 	- Formal language
 	- Children's language
 	- Lots of typos
