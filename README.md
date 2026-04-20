@@ -182,6 +182,10 @@ Test LLM's behaviour under varying circumstances, i.e., combinations of the cate
 
 ---
 
-⠎⠍⠂  
-⠎⠏⠆  
-⠈⠏⠀
+```
+⢠⡶⠛⠛⠛⠛⣤  
+⠻⣦⣴⣿⣤⣤⡀  
+⣼⠃⠀⣿⠀⢀⡟  
+⠉⠛⠛⣿⠛⠉⣠  
+⠀⠀⠀⣿⠀⠀⢶  
+```
