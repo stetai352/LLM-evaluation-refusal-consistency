@@ -10,6 +10,8 @@ A small benchmark to test an open-source LLM on refusal consistency.
 - [x] Check why so slow. Run on GPU?
 - [x] Integrate usage of external model via API call. ~~Gemini?~~ Mistral. (Has generous limits, sufficient for experimentation and is free)
 - [ ] Make use of .env file
+- [ ] Revision prompt database, add styles and framings incrementally
+- [ ] Include Model-grading
 - [ ] Compare different models later?
 
 </details>
@@ -51,9 +53,9 @@ A small benchmark to test an open-source LLM on refusal consistency.
 		- EleutherAI's [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)
 		- Papers on refusal consistency, e. g. "Harm Bench" and "SimpleSafetyTests" for inspiration on structure.
 - [ ] Build Dataset of Prompts (5-10 h)
-	- [ ] Write/curate prompts used for eval.
-	- [ ] e. g. a factual question, a correct answer, follow-up where user pushes back.
-	- [ ] Strive for variety: Have more than 100 samples, covering different topics or phrasings. Store as `JSON` files (or `CSV`) under `data/` folder. Include metadata columns like `category`, `framing_type` and `expected_behaviour`.
+	- [x] Write/curate prompts used for eval.
+	- [x] e. g. a factual question, a correct answer, follow-up where user pushes back.
+	- [x] Strive for variety: Have more than 100 samples, covering different topics or phrasings. Store as `JSON` files (or `CSV`) under `data/` folder. Include metadata columns like `category`, `framing_type` and `expected_behaviour`.
 	- [ ] Consider these sources:
 		- Existing public datasets on HuggingFace (use search function) as inspiration
 		- Look at eval dataset structure in [BIG-Bench](https://github.com/google/BIG-bench) or [TruthfulQA](https://github.com/sylinrl/TruthfulQA)
@@ -102,6 +104,7 @@ A small benchmark to test an open-source LLM on refusal consistency.
 - `260413` Run agent on a Mistral model via API call.
 - `260414` First draft for refusal prompt categories.
 - `260417` Formulate research question.
+- `260420` First draft for prompt database.
 </details>
 
 # Methodology
