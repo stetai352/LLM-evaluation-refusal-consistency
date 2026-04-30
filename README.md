@@ -10,9 +10,10 @@ A small benchmark to test an open-source LLM on refusal consistency.
 - [x] Check why so slow. Run on GPU?
 - [x] Integrate usage of external model via API call. ~~Gemini?~~ Mistral. (Has generous limits, sufficient for experimentation and is free)
 - [ ] Make use of .env file
-- [ ] Revision prompt database, add styles and framings incrementally
+- [x] Revision prompt database, add styles and framings incrementally
 - [ ] Include Model-grading
 - [ ] Compare different models later?
+- [ ] Transparently log the prompts given to Claude (Sonnet 4.6) to obtain the prompts for the eval database.
 
 </details>
 
