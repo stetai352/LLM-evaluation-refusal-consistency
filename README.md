@@ -53,26 +53,26 @@ A small benchmark to test an open-source LLM on refusal consistency.
 		- [METR task design documentation](https://metr.org/)
 		- EleutherAI's [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness)
 		- Papers on refusal consistency, e. g. "Harm Bench" and "SimpleSafetyTests" for inspiration on structure.
-- [ ] Build Dataset of Prompts (5-10 h)
+- [x] Build Dataset of Prompts (5-10 h)
 	- [x] Write/curate prompts used for eval.
 	- [x] e. g. a factual question, a correct answer, follow-up where user pushes back.
 	- [x] Strive for variety: Have more than 100 samples, covering different topics or phrasings. Store as `JSON` files (or `CSV`) under `data/` folder. Include metadata columns like `category`, `framing_type` and `expected_behaviour`.
-	- [ ] Consider these sources:
+	- [x] Consider these sources:
 		- Existing public datasets on HuggingFace (use search function) as inspiration
 		- Look at eval dataset structure in [BIG-Bench](https://github.com/google/BIG-bench) or [TruthfulQA](https://github.com/sylinrl/TruthfulQA)
 		- Papers on refusal consistency, e. g. "Harm Bench" and "SimpleSafetyTests" for inspiration on structure.
 		- OWASP LLM Top 10 for categories of LLM risks to draw from.
-- [ ] Write Eval in `inspect-ai` (6-12 h)
-	- [ ] Write python script using `inspect-ai`'s three components:
+- [x] Write Eval in `inspect-ai` (6-12 h)
+	- [x] Write python script using `inspect-ai`'s three components:
 		- dataset loader
 		- solver (sending prompts to local model)
 		- scorer (checking output against expected behaviour)
-	- [ ] Start with keyword match scorer (e. g. "I can't", "I'm unable to", etc.) and optionally expand to model-graded scorer where model judges the output.
-	- [ ] Consider these sources:
+	- [x] Start with keyword match scorer (e. g. "I can't", "I'm unable to", etc.) and optionally expand to model-graded scorer where model judges the output.
+	- [x] Consider these sources:
 		- [`inspect-ai` documentation](https://inspect.aisi.org.uk/), especially the "Sovers" and "Scorers" sections.
 		- `inspect-ai`'s [GitHub repo of example evals](https://github.com/UKGovernmentBEIS/inspect_evals)
 - [ ] Run Eval and Collect Results (1-3 h)
-	- [ ] Run model and save output logs to `results/` folder. (`inspect-ai` produces logs automatically)
+	- [ ] Run model and save output logs to `logs/` folder. (`inspect-ai` produces logs automatically)
 	- [ ] Run on second model?
 - [ ] Analyse and Visualise Results (5-10 h)
 	- [ ] Load `JSON` output
