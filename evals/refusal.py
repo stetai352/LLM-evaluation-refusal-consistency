@@ -7,15 +7,11 @@ from inspect_ai.scorer import model_graded_qa
 @task
 def refusal():
 
-    dataset = json_dataset(
-        [
-            "data/260422_refusal_direct_hypothetical.json",
-            "data/260501_refusal_villain_madscientist_eli5.json",
-            "data/260503_refusal_endorsement_blackmail.json",
-            "data/260504_refusal_trust_homework.json"
-        ],
-        input="input",
-        target="target",
+    dataset = (
+         json_dataset("data/260422_refusal_direct_hypothetical.json", input="input", target="target")+
+         json_dataset("data/260501_refusal_villain_madscientist_eli5.json", input="input", target="target")+
+         json_dataset("data/260503_refusal_endorsement_blackmail.json", input="input", target="target")+
+         json_dataset("data/260504_refusal_trust_homework.json", input="input", target="target")
     )
 
     return Task(
