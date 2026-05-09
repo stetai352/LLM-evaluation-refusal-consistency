@@ -100,12 +100,13 @@ A small benchmark to test an open-source LLM on refusal consistency.
 
 <summary> Click here to expand Milestones </summary>
 
-- `260411` Set up GitHub project.
-- `260412` Spend a total of eight hours figuring out the best configuration of thread usage to optimize the local model for my machine. Got the estimated total time from 18h to 9h, but this is not sufficient for productive analysis. Finally concluded to switch to a non-local model via API call.
-- `260413` Run agent on a Mistral model via API call.
-- `260414` First draft for refusal prompt categories.
-- `260417` Formulate research question.
+- `260504` Finish first prompt database.
 - `260420` First draft for prompt database.
+- `260417` Formulate research question.
+- `260414` First draft for refusal prompt categories.
+- `260413` Run agent on a Mistral model via API call.
+- `260412` Spend a total of eight hours figuring out the best configuration of thread usage to optimize the local model for my machine. Got the estimated total time from 18h to 9h, but this is not sufficient for productive analysis. Finally concluded to switch to a non-local model via API call.
+- `260411` Set up GitHub project.
 </details>
 
 # Methodology
