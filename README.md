@@ -1,4 +1,7 @@
 # LLM-evaluation-refusal-consistency
+
+<img align="left" src="images/logoAi01.1.png" alt="Stetai AI Logo" width="100">
+
 A small benchmark to test an open-source LLM on refusal consistency.
 
 
