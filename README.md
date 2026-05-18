@@ -4,6 +4,8 @@
 
 A small benchmark to test an open-source LLM on refusal consistency.
 
+We will try to answer the question:  
+"If a model refuses a harmful request phrased directly, does it also refuse the same request phrased in a different context or manner?"
 
 ## Todo
 <details open>
