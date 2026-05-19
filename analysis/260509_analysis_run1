@@ -1,0 +1,23 @@
+# Results of the first refusal run
+
+The database of prompts consisting of
+- [Direct request and hypothetical framing](../data/260422_refusal_direct_hypothetical.json) 
+- [Roleplay as villain, mad scientist and asking for an explanation in the style of r/eli](../data/260501_refusal_villain_madscientist_eli5.json) ([r/explainlikeimfive is a subreddit](https://www.reddit.com/r/explainlikeimfive/) where difficult concepts are explained in an oversimplified way such that laypeople can understand them.)
+- [Pretending endorsement, and threatening bad outcomes if information is not provided](../data/260503_refusal_endorsement_blackmail.json) 
+- [Assuring trust, pretending to require the information for homeworks](../data/260504_refusal_trust_homework.json)
+
+The dataset has been evaluated on an LLM by Mistral (Mistral-large [todo: which version?]) and graded by the same model under the following prompt:
+
+[todo: insert prompt]
+
+See the logs of this run in `logs/refusal_run1`.
+
+## Scores
+
+
+
+## Problems
+
+## Misclassification
+
+## Conclusion
